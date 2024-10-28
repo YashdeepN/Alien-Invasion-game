@@ -33,6 +33,12 @@ class AlienInvasion:
             self.bullets.update()
             self._update_screen()
 
+            # Get rid of bullets that have reached top of the screen
+            for bullet in self.bullets.copy():
+                if bullet.rect.bottom <= 0:
+                    self.bullets.remove(bullet)
+            print(len(self.bullets))
+
     def _check_events(self):
         """Respond to keypresses and mouse events."""
         for event in pygame.event.get():
