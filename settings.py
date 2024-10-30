@@ -20,4 +20,8 @@ class Settings:
         self.ship_speed = 1.5
 
         # Alien settings
-        self.alien_speed = 1.0
+        self.alien_speed = 1.0                      # horizontal component of speed
+        self.fleet_drop_speed = 10  # speed of fall down at edges
+        # fleet_direction of 1 represents right; -1 prepresents left
+        # Dir of motion in x-direction.
+        self.fleet_direction = 1
